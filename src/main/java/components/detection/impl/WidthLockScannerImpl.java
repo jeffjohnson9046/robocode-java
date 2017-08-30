@@ -24,12 +24,12 @@ public class WidthLockScannerImpl implements Scanner {
      * 2.  Determine how far the radar has to turn in order to stay locked on our target.
      * 3.  Add in some padding (the "extra turn") in an attempt to account for the target's components.movement.
      *
-     * @param e The {@link robocode.ScannedRobotEvent} arguments from the {@code onScannedRobot} event
+     * @param scannedRobotEvent The {@link robocode.ScannedRobotEvent} arguments from the {@code onScannedRobot} event
      */
-    public void scan(final ScannedRobotEvent e) {
+    public void scan(final ScannedRobotEvent scannedRobotEvent) {
         final double enemyAbsoluteBearing = Helpers.getAbsoluteBearing(advancedRobot.getHeadingRadians(),
-            e.getBearingRadians());
-        final double extraTurnAmount = Math.min(Math.atan(Helpers.ROBOT_WIDTH / e.getDistance()),
+            scannedRobotEvent.getBearingRadians());
+        final double extraTurnAmount = Math.min(Math.atan(Helpers.ROBOT_WIDTH / scannedRobotEvent.getDistance()),
             Rules.RADAR_TURN_RATE_RADIANS);
         double radarTurnAmount = Utils.normalRelativeAngle(enemyAbsoluteBearing - advancedRobot.getRadarHeadingRadians());
 
