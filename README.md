@@ -6,7 +6,7 @@ This [Robocode](http://robocode.sourceforge.net/) robot is a port of the robot o
 Loosely based on the [Ogre](https://boardgamegeek.com/boardgame/5206/ogre) board game, the code is broken down into two main packages:
 
 * **components:** The parts that make up the Ogre robot:
-  * **detection:** Controls the Ogre's radar and 
+  * **detection:** Controls the Ogre's radar and target detection
   * **movement:** Controls the Ogre's movement around the arena
   * **weaponry:** Controls the Ogre's turret and gun
 * **robots:**  The robot implementation that extends `Robot` or `AdvancedRobot`
