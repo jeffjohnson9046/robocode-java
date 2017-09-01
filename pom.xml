@@ -8,6 +8,9 @@
     <artifactId>ogre</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
+    <build>
+        <finalName>robots.Ogre_1.0</finalName>
+    </build>
 
     <dependencies>
         <!-- https://mvnrepository.com/artifact/net.sf.robocode/robocode.api -->
